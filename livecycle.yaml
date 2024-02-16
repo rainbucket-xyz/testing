@@ -1,0 +1,19 @@
+version: v1alpha1
+web:
+    build:
+        type: Dockerfile
+        dockerfile:
+            contents: |
+                FROM node:20.8.0 as build
+                WORKDIR /app
+                COPY package.json package-lock.json ./
+                RUN npm install
+                COPY . .
+                RUN npm run build
+        build_args: []
+    output:
+        type: static
+        static:
+            path: /app/dist
+    proxy:
+        rules: []
