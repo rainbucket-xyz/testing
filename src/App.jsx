@@ -8,8 +8,8 @@ function App() {
   const [count, setCount] = useState(0)
   
   useEffect(() => {
-    LivecycleSdk.init()
-  });
+    LivecycleSdk.init().catch(console.error)
+  }, []);
 
   return (
     <>
