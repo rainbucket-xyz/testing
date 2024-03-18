@@ -1,1 +1,1 @@
-¡Hola mundo, me llamo Rainbucket! :)
+Hello World! I be Rainbucket!
